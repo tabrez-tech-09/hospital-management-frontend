@@ -21,7 +21,7 @@ const NotFoundPage = () => {
 
             {/* Error message */}
             <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-                404 – Page Not Found
+                404 – Page Not Found !
             </h1>
 
             {/* Optional secondary text */}
