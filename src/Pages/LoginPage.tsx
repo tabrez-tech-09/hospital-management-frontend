@@ -11,7 +11,6 @@ import { setJwt } from '../Slices/JwtSlice';
 import { setUser } from '../Slices/UserSlice';
 const LoginPage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const form = useForm({
     initialValues: {

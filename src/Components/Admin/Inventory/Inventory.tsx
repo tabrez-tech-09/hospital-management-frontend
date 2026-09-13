@@ -33,8 +33,6 @@ const Inventory = () => {
         setFilters(_filters);
         setGlobalFilterValue(value);
     };
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [data, setData] = useState<any[]>([]);
     const [medicine, setMedicine] = useState<any[]>([]);
 
@@ -164,7 +162,6 @@ const Inventory = () => {
 
         </div>
     };
-    const header = renderHeader()
 
     const renderSelectOption: SelectProps['renderOption'] = ({ option, checked }: any) => (
         <Group flex="1" gap="xs">
@@ -186,7 +183,7 @@ const Inventory = () => {
         <div>
             {!edit ? <div>
                 <Toolbar className="mb-4 !p-1" start={startToolbarTemplate} end={rightToolbarTemplate}></Toolbar>
-                {view == "table" && !matches ? <DataTable stripedRows value={data} size='small' paginator rows={10}
+                {view === "table" && !matches ? <DataTable stripedRows value={data} size='small' paginator rows={10}
                     paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
                     rowsPerPageOptions={[10, 25, 50]} dataKey="id"
 
